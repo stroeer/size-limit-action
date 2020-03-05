@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`report diff returns additions in bytes and percentages when sizes have changed 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 10,
+        "change": 5,
+        "path": "file5.js",
+        "percent": 100,
+      },
+      Object {
+        "bytes": 20,
+        "change": 10,
+        "path": "file10.js",
+        "percent": 100,
+      },
+    ],
+    "total": Object {
+      "bytes": 30,
+      "change": 15,
+      "path": "myPkg",
+      "percent": 100,
+    },
+  },
+}
+`;
+
+exports[`report diff returns an empty object for empty inputs 1`] = `Object {}`;
+
+exports[`report diff returns existing files as unchanged 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 5,
+        "change": 0,
+        "path": "file5.js",
+        "percent": 0,
+      },
+      Object {
+        "bytes": 10,
+        "change": 0,
+        "path": "file10.js",
+        "percent": 0,
+      },
+    ],
+    "total": Object {
+      "bytes": 15,
+      "change": 0,
+      "path": "myPkg",
+      "percent": 0,
+    },
+  },
+}
+`;
+
+exports[`report diff returns files as extra bytes 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 5,
+        "change": 5,
+        "path": "file5.js",
+        "percent": 100,
+      },
+      Object {
+        "bytes": 10,
+        "change": 10,
+        "path": "file10.js",
+        "percent": 100,
+      },
+    ],
+    "total": Object {
+      "bytes": 15,
+      "change": 15,
+      "path": "myPkg",
+      "percent": 100,
+    },
+  },
+}
+`;
+
+exports[`report diff returns reductions and additions at the same time 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 1,
+        "change": -4,
+        "path": "file5.js",
+        "percent": -80,
+      },
+      Object {
+        "bytes": 20,
+        "change": 10,
+        "path": "file10.js",
+        "percent": 100,
+      },
+    ],
+    "total": Object {
+      "bytes": 21,
+      "change": 6,
+      "path": "myPkg",
+      "percent": 40,
+    },
+  },
+}
+`;
+
+exports[`report diff returns reductions in bytes and percentages when sizes have changed 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 1,
+        "change": -4,
+        "path": "file5.js",
+        "percent": -80,
+      },
+      Object {
+        "bytes": 5,
+        "change": -5,
+        "path": "file10.js",
+        "percent": -50,
+      },
+    ],
+    "total": Object {
+      "bytes": 6,
+      "change": -9,
+      "path": "myPkg",
+      "percent": -60,
+    },
+  },
+}
+`;
+
+exports[`report diff returns removed files missing bytes 1`] = `
+Object {
+  "myPkg": Object {
+    "files": Array [
+      Object {
+        "bytes": 0,
+        "change": -5,
+        "path": "file5.js",
+        "percent": -100,
+      },
+      Object {
+        "bytes": 0,
+        "change": -10,
+        "path": "file10.js",
+        "percent": -100,
+      },
+    ],
+    "total": Object {
+      "bytes": 0,
+      "change": -15,
+      "path": "myPkg",
+      "percent": -100,
+    },
+  },
+}
+`;

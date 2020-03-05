@@ -1,0 +1,17 @@
+name: 'size-limit-action'
+description: 'Have a bot comment size-limit results for every PR'
+author: 'Lukas Bombach'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'package'
+  color: 'green'
+inputs:
+  github-token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+  packages:
+    description: 'Glob pattern of packages where to run the action (default = "."). Workspaces will be detected and included automatically'
+    required: false
+    default: .
